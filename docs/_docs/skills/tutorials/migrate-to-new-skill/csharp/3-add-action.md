@@ -15,6 +15,8 @@ order: 1
 
 In addition to utterance based invocation of your Skill, we have now introduced action based invocation similar to a method call whereby a client can invoke a specific function of your Skill passing data (slots) and receive response data back. The skill can still prompt as usual in a conversational manner for missing slots and other needs.
 
+Follow this tutorial if you wish to extend your Skill to add action capabilities.
+
 ### Steps
 
 1. Create a new class called `SampleAction` within your Dialogs folder and paste in the class definitions shown below. This class is based on the existing `SampleDialog` and shows some extensions to handle an incoming object containing data and how to return an object back to the caller as part the end dialog operation.
