@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.botframework.com/schemas/skills/skill-manifest-2.0.0.json",
+  "$id": "ExampleBF47Skill",
+  "name": "ExampleBF47Skill",
+  "description": "Sample Skill description",
+  "publisherName": "Your Company",
+  "version": "1.0",
+  "iconUrl": "https://djexamplebf47skill-jddomj7.azurewebsites.net/calendarSkill.png",
+  "copyright": "Copyright (c) Microsoft Corporation. All rights reserved.",
+  "license": "",
+  "privacyUrl": "https://djexamplebf47skill-jddomj7.azurewebsites.net/privacy.html",
+  "tags": [
+    "sample",
+    "skill"
+  ],
+  "endpoints": [
+    {
+      "name": "production",
+      "protocol": "BotFrameworkV3",
+      "description": "Production endpoint for the Sample Skill",
+      "endpointUrl": "https://djexamplebf47skill-jddomj7.azurewebsites.net/api/messages",
+      "msAppId": "faa843b4-3f8b-418a-b316-0cdbb638de3b"
+    }
+  ],
+  "activities": {
+    "sampleAction": {
+      "description": "Sample action which accepts an input object and returns an object back.",
+      "type": "event",
+      "name": "SampleAction",
+      "value": {
+        "$ref": "#/definitions/inputObject"
+      },
+      "resultValue": {
+        "$ref": "#/definitions/responseObject"
+      }
+    },
+    "message": {
+      "type": "message",
+      "description": "Receives the users utterance and attempts to resolve it using the skill's LU models"
+    }
+  },
+  "definitions": {
+    "inputObject": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The users name."
+        }
+      }
+    },
+    "responseObject": {
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "integer",
+          "description": "A customer identifier."
+        }
+      }
+    }
+  }
+}
